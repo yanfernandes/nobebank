@@ -1,25 +1,20 @@
 class BankAccountsController < ApplicationController
   before_action :set_bank_account, only: %i[ show edit update destroy ]
 
-  # GET /bank_accounts or /bank_accounts.json
   def index
     @bank_accounts = BankAccount.all
   end
 
-  # GET /bank_accounts/1 or /bank_accounts/1.json
   def show
   end
 
-  # GET /bank_accounts/new
   def new
     @bank_account = BankAccount.new
   end
 
-  # GET /bank_accounts/1/edit
   def edit
   end
 
-  # POST /bank_accounts or /bank_accounts.json
   def create
     @bank_account = BankAccount.new(bank_account_params)
 
@@ -34,7 +29,6 @@ class BankAccountsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /bank_accounts/1 or /bank_accounts/1.json
   def update
     respond_to do |format|
       if @bank_account.update(bank_account_params)
@@ -47,7 +41,6 @@ class BankAccountsController < ApplicationController
     end
   end
 
-  # DELETE /bank_accounts/1 or /bank_accounts/1.json
   def destroy
     @bank_account.destroy
 
@@ -58,12 +51,10 @@ class BankAccountsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_bank_account
       @bank_account = BankAccount.find(params[:id])
     end
 
-    # Only allow a list of trusted parameters through.
     def bank_account_params
       params.require(:bank_account).permit(:user_id)
     end
