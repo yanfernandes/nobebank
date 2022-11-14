@@ -1,6 +1,10 @@
 <% if user_signed_in? %> 
  <div> Olá, <%= current_user.email %> </div> 
+  <%= link_to "Suas Contas", bank_accounts_path %>
+  <%= link_to "Criar Conta", new_bank_account_path %>
   <%= button_to "Sign out", destroy_user_session_path, method: :delete %> 
+  <%= link_to "Depósitos", deposits_path %> 
+  <h3><%= "Number of Accounts: #{number_of_accounts}"%></h3>
 
 <% else %>
  <div> Menu de acesso </div> 
