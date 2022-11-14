@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  bank_account: one
+  deposit: one
+  withdraw: one
+
+two:
+  bank_account: two
+  deposit: two
+  withdraw: two
