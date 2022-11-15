@@ -4,7 +4,8 @@
   <%= link_to "Criar Conta", new_bank_account_path %>
   <%= button_to "Sign out", destroy_user_session_path, method: :delete %> 
   <%= link_to "Depósitos", deposits_path %>
-  <%= link_to "Saque", withdraws_path %> 
+  <%= link_to "Saque", withdraws_path %>
+  <%= link_to "Saldo e Extrato", balances_path %>
 
   <h3><%= "Number of Accounts: #{number_of_accounts}"%></h3>
 
